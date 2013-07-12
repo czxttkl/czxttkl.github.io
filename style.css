@@ -80,6 +80,7 @@ body {background-color:transparent; width: 1000px; margin: auto; font-family: Ge
 
 
 
+
 #footer {clear: both; text-align: right; padding-right:10px; background-origin:border-box; background: url(images/seperator.png) repeat-x top; font-size: .8em; color: #a3a3a3;padding-bottom:20px;}
 
 
@@ -229,7 +230,7 @@ PROJECT CONTENT
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-top:0px;
-	background: url(/images/thumb_bg.png) no-repeat;
+	background: url(images/thumb_bg.png) no-repeat;
 }
 .inlineRed {
 color:#A80F29;
@@ -260,4 +261,28 @@ font-family:Tahoma, Geneva, sans-serif;
 .galsep span:hover {
 	cursor:pointer;
 	font-weight:bold;
+}
+
+.experience {
+	margin-top:20px;
+}
+.experience img{
+	height:50px;
+	margin: 20px;
+	display:block;
+}
+
+h2 {
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.experience p {
+	line-height: 2em;
+	text-align:justify;
+}
+
+.snsicon {
+	width: 70px;
+	margin:15px;
 }
