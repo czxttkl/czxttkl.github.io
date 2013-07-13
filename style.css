@@ -70,7 +70,7 @@ h6  {font-size: 1em;margin-bottom:2px;}
 
 
 /*------------------ Site Structure ------------------*/
-html { font-size: 100%; background: url(images/bg2.jpg) no-repeat;background-position:right bottom; background-size:100%;background-attachment:fixed;}
+html { font-size: 100%; background: url(images/bg.jpg) no-repeat;background-position:right bottom; background-size:100%;background-attachment:fixed;}
 
 body {background-color:transparent; width: 1000px; margin: auto; font-family: Georgia, "Times New Roman", Times, serif; font-size: .875em; color: black;}
 
