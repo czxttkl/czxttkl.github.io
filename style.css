@@ -269,6 +269,7 @@ padding-left:12px;
 margin-bottom:10px;
 font-size:1.6em;
 font-family:Tahoma, Geneva, sans-serif;
+font-weight: inherit;
 }
 
 .galsep span {
@@ -292,10 +293,6 @@ font-family:Tahoma, Geneva, sans-serif;
 	display:block;
 }
 
-h2 {
-	font-size: 15px;
-	margin-top: 10px;
-}
 
 .experience p {
 	line-height: 2em;
