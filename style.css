@@ -100,6 +100,7 @@ a:hover {
 	font-family:
 	MistralWeb;
 	font-size:2.6em;
+	text-align:right; 
 }
 
 #motto h3 {
@@ -109,6 +110,10 @@ a:hover {
 }
 
 
+#czxwebsite {
+	margin-top:20px;
+	text-align:right; 
+}
 
 
 #intro {
