@@ -20,11 +20,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding:0;
 	border:0;
 	outline:0;
-	font-weight:inherit;
 	font-style:inherit;
 	font-size:100%;
 	font-family:inherit;
-	vertical-align:text-top;
 }
 body {
 	line-height:1;
@@ -76,10 +74,7 @@ html { font-size: 100%; background: url(images/bg2.jpg) no-repeat;background-pos
 
 body {background-color:transparent; width: 1000px; margin: auto; font-family: Georgia, "Times New Roman", Times, serif; font-size: .875em; color: black;}
 
-#header {height: 160px; margin-top:30px;}
-
-
-
+#header { margin-top:30px;}
 
 #footer {clear: both; text-align: right; padding-right:10px; background-origin:border-box; background: url(images/seperator.png) repeat-x top; font-size: .8em; color: #a3a3a3;padding-bottom:20px;}
 
@@ -96,9 +91,23 @@ a:hover {
 }
 .slider-wrapper { 
 	width: 685px;
-	height:370px; 
+	height:600px; 
 	padding-left:30px;
 }
+
+#motto {
+	margin-top:20px;
+	font-family:
+	MistralWeb;
+	font-size:2.6em;
+}
+
+#motto h3 {
+	text-align:right; 
+	margin-top:10px;
+	font-size:0.8em;
+}
+
 
 
 
@@ -111,6 +120,7 @@ a:hover {
 	width:298px;
 	display:inline-block;
 }
+
 #personalinfo {
 	-webkit-box-orient:horizontal;
 	-moz-box-orient:horizontal;
@@ -119,16 +129,20 @@ a:hover {
 	width:100%;
 	height:160px;
 }
+
 #intro p {padding: 0;
 	font-size: 1em;
 	text-align:justify;
 	line-height:2em;
 	}
+
 #intro p span{
 font-size:24px;
 font-family:Tahoma, Geneva, sans-serif;
 color:orange;
+vertical-align: text-top;
 }
+
 #portrait {
 	width:136px;
 	float:left;
@@ -160,6 +174,7 @@ ul.dropdown                         { position: relative;
 									  
 ul.dropdown li.title                     { float: left; zoom: 1;}
 ul.dropdown li.social                    { float: right; zoom: 1;}
+ul.dropdown li.titlenew					 { float: right; zoom: 1; margin-left: 40px;}
 ul.dropdown li a                    { display: block; 
 	 								  color:#C30; }
 ul.dropdown li.title a {padding: 0px 20px;}
@@ -285,4 +300,16 @@ h2 {
 .snsicon {
 	width: 70px;
 	margin:15px;
+}
+
+.slider-wrapper h3 {
+	font-size:15px;
+}
+
+.slider-wrapper ul {
+	line-height: 2em;
+}
+
+.slider-wrapper ul li {
+	margin-left: 20px;
 }
