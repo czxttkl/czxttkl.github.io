@@ -217,12 +217,15 @@ PROJECT CONTENT
 	font-size:1.1em;
 	font-weight:200;
 }
+
 .left{
 	float:left;
 	}
+
 .right{
 	float:right;
 }
+
 .projectcontent p {
 	padding-left:10px;
 	padding-right:10px;
@@ -230,6 +233,15 @@ PROJECT CONTENT
 	line-height:1.7em;
 	text-align: justify;
 }
+
+.projectcontent a {
+	color:black;
+}
+
+.projectcontent a:hover {
+	color:#A80F29;
+}
+
 .projectimg{
 	width:380px;
 	-width:345px;
@@ -252,12 +264,14 @@ PROJECT CONTENT
 	margin-top:0px;
 	background: url(images/thumb_bg.png) no-repeat;
 }
+
 .inlineRed {
-color:#A80F29;
+	color:#A80F29;
 	}
 	
+
 .galsep {
-	margin-bottom:10px;
+	margin-bottom:30px;
 	text-align:right;
 }
 
