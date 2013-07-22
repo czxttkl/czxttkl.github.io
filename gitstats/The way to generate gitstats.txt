@@ -1,0 +1,45 @@
+
+Under the ubuntu:
+
+
+
+
+To generate gitstats-ruby (requiring "apt-get install gitstats" first):
+
+1. gem install gitstats-ruby
+
+2. gitstats --out=stats /media/czxttkl/p/Dropbox/java/MainActivity/ /media/czxttkl/p/Dropbox/java/hugedata-runnerserver/
+
+the output folder('stats' in this case) is in the terminal's current folder.
+
+3. revise html pages by removing invalid imgs. 
+
+
+
+
+To generate gitstats-origin (requiring "gem uninstall gitstats-ruby" first):
+
+1. apt-get install gitstats
+
+
+
+
+Places to be revised in gitstats-ruby's index.html:
+
+index.html:
+revising repositories names, adding hyperlink to each's gitstats origin index.html
+revise head "file"->"file/lines"
+
+file.html:
+div id="toc" ul: removing "Files by year and month" & "Filechanges by year and month"
+revise head "file"->"file/lines"
+
+lines.html:
+div id="toc" ul: removing "Lines by year and month" & "Linechanges by year and month"
+move lineschart to file.html
+delete lines.html
+
+authors.html:
+revise head "file"->"file/lines"
+add "//" to $(".toggleable").hide();
+delete all imgs

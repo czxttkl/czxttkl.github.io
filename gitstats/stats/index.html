@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>
+      Statistics
+    </title>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <link href='jquery.jqplot.min.css' rel='stylesheet' type='text/css'>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <script src='jquery.js' type='text/javascript'></script>
+    <script src='jquery.jqplot.min.js' type='text/javascript'></script>
+    <script src='jqplot.cursor.min.js' type='text/javascript'></script>
+    <script src='jquery.tablesorter.js' type='text/javascript'></script>
+    <script src='jqplot.dateAxisRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasTextRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasAxisTickRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasAxisLabelRenderer.min.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <script>
+      $.tablesorter.addParser({
+        id: 'size',
+        is: function(s) {
+            return false;
+        },
+        format: function(s) {
+            return $.tablesorter.formatFloat(s.replace(/k/,'000').replace(/M/,'000000').replace(/G/,'000000000'));
+        },
+        type: 'numeric'
+      });
+      
+      $(document).ready(function() {
+        $(".toggleable").hide();
+        $(".toggle").click(function() {
+          $(this).toggleClass("active").next().slideToggle("slow");
+          return false;
+        });
+      });
+      
+      var jqplot_zoom_reset = function(evt, p, cursor) {
+        for(var i = 0;i < p.series.length;i++) {
+          p.series[i].showMarker = false;
+          p.series[i].markerOptions.show = false;
+          p.series[i].markerRenderer.show = false;
+        }
+      
+        p.redraw();
+      };
+      
+      var jqplot_zoom = function(evt, gridpos, datapos, p, cursor) {
+        var min = p.axes['xaxis'].min;
+        var max = p.axes['xaxis'].max;
+      
+        var maxaxis = {
+          yaxis: null,
+          y2axis: null,
+          y3axis: null,
+          y4axis: null,
+          y5axis: null,
+          y6axis: null,
+          y7axis: null,
+          y8axis: null,
+          y9axis: null
+        };
+      
+        var cnt = [];
+      
+        var maxlen = 0;
+        for(var i = 0;i < p.series.length;i++) {
+          var len = p.series[i].data.length;
+          if(len > maxlen)
+            maxlen = len;
+          cnt[i] = 0;
+        }
+      
+        for(var i = 0;i < maxlen;i++) {
+          for(var j = 0;j < p.series.length;j++) {
+            if(i < p.series[j].data.length) {
+              if((p.series[j].data[i][0] >= min) && (p.series[j].data[i][0] <= max)) {
+                cnt[j]++;
+                if(maxaxis[p.series[j].yaxis] == null)
+                  maxaxis[p.series[j].yaxis] = p.series[j].data[i][1];
+                else if(p.series[j].data[i][1] > maxaxis[p.series[j].yaxis])
+                  maxaxis[p.series[j].yaxis] = p.series[j].data[i][1];
+              }
+            }
+          }
+        }
+      
+        for(var i = 0;i < p.series.length;i++) {
+          p.series[i].showMarker = cnt[i] <= 100;
+          p.series[i].markerOptions.show = cnt[i] <= 100;
+          p.series[i].markerRenderer.show = cnt[i] <= 100;
+        }
+      
+        for(var ax in maxaxis) {
+          if(maxaxis[ax] != null) {
+            p.axes[ax].max = maxaxis[ax] * p.axes[ax].pad;
+            p.axes[ax].tickInterval = null;
+            p.axes[ax].numberTicks = null;
+            p.axes[ax]._ticks = [];
+          }
+        }
+        p.redraw();
+      };
+    </script>
+    <div id='menu'>
+      <ul>
+        <li class='first'>
+          <a href='index.html'>General</a>
+        </li>
+        <li>
+          <a href='activity.html'>Activity</a>
+        </li>
+        <li>
+          <a href='authors.html'>Authors</a>
+        </li>
+        <li>
+          <a href='files.html'>Files/Lines</a>
+        </li>
+      </ul>
+    </div>
+    <div id='content'>
+      <div id='toc'>
+        <h2>
+          <a name='toc'>Blocks</a>
+        </h2>
+        <ul>
+          <li>
+            <a href='#general'>Stats</a>
+          </li>
+          <li>
+            <a href='#repos'>Repositories</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class='blockheader'>
+        <a name='general'>Stats</a>
+      </h2>
+      
+      <div id="block-general" class="blockcontainer">
+      <div class='blocktable'>
+        <table class='simpletable'>
+          <tbody>
+            <tr>
+              <th>Generation time</th>
+              <td>2013-07-22 10:08:46 +0800</td>
+            </tr>
+            <tr>
+              <th>Authors</th>
+              <td>2 (average 39.0 commits per author)</td>
+            </tr>
+            <tr>
+              <th>Commits</th>
+              <td>79 (average 2.0 commits per active day, 0.0 per all days)</td>
+            </tr>
+            <tr>
+              <th>Files</th>
+              <td>152 (344 added, 192 deleted)</td>
+            </tr>
+            <tr>
+              <th>Lines</th>
+              <td>45754 (56013 added, 10259 deleted)</td>
+            </tr>
+            <tr>
+              <th>Size</th>
+              <td>3017875 bytes</td>
+            </tr>
+            <tr>
+              <th>First commit</th>
+              <td>2013-01-29 17:17:15 +0800</td>
+            </tr>
+            <tr>
+              <th>Last commit</th>
+              <td>2013-07-20 19:27:39 +0800</td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td>34 / 173 active days (19.65%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <h2 class='blockheader'>
+        <a name='repos'>Repositories</a>
+      </h2>
+      
+      <div id="block-repos" class="blockcontainer">
+      <div class='blocktable'>
+        <table class='simpletable'>
+          <thead>
+            <th>Name</th>
+            <th>Path</th>
+            <th>Ref</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="../hugedata-maintenance/index.html">hugedata-maintenance</a></td>
+              <td>/media/czxttkl/p/Dropbox/java/MainActivity/</td>
+              <td>HEAD</td>
+            </tr>
+            <tr>
+              <td><a href="../hugedata-runnerserver/index.html">hugedata-runnerserver</a></td>
+              <td>/media/czxttkl/p/Dropbox/java/hugedata-runnerserver/</td>
+              <td>HEAD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

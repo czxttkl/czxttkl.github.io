@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>
+      Statistics
+    </title>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <link href='jquery.jqplot.min.css' rel='stylesheet' type='text/css'>
+    <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
+    <script src='jquery.js' type='text/javascript'></script>
+    <script src='jquery.jqplot.min.js' type='text/javascript'></script>
+    <script src='jqplot.cursor.min.js' type='text/javascript'></script>
+    <script src='jquery.tablesorter.js' type='text/javascript'></script>
+    <script src='jqplot.dateAxisRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasTextRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasAxisTickRenderer.min.js' type='text/javascript'></script>
+    <script src='jqplot.canvasAxisLabelRenderer.min.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <script>
+      $.tablesorter.addParser({
+        id: 'size',
+        is: function(s) {
+            return false;
+        },
+        format: function(s) {
+            return $.tablesorter.formatFloat(s.replace(/k/,'000').replace(/M/,'000000').replace(/G/,'000000000'));
+        },
+        type: 'numeric'
+      });
+      
+      $(document).ready(function() {
+        $(".toggleable").hide();
+        $(".toggle").click(function() {
+          $(this).toggleClass("active").next().slideToggle("slow");
+          return false;
+        });
+      });
+      
+      var jqplot_zoom_reset = function(evt, p, cursor) {
+        for(var i = 0;i < p.series.length;i++) {
+          p.series[i].showMarker = false;
+          p.series[i].markerOptions.show = false;
+          p.series[i].markerRenderer.show = false;
+        }
+      
+        p.redraw();
+      };
+      
+      var jqplot_zoom = function(evt, gridpos, datapos, p, cursor) {
+        var min = p.axes['xaxis'].min;
+        var max = p.axes['xaxis'].max;
+      
+        var maxaxis = {
+          yaxis: null,
+          y2axis: null,
+          y3axis: null,
+          y4axis: null,
+          y5axis: null,
+          y6axis: null,
+          y7axis: null,
+          y8axis: null,
+          y9axis: null
+        };
+      
+        var cnt = [];
+      
+        var maxlen = 0;
+        for(var i = 0;i < p.series.length;i++) {
+          var len = p.series[i].data.length;
+          if(len > maxlen)
+            maxlen = len;
+          cnt[i] = 0;
+        }
+      
+        for(var i = 0;i < maxlen;i++) {
+          for(var j = 0;j < p.series.length;j++) {
+            if(i < p.series[j].data.length) {
+              if((p.series[j].data[i][0] >= min) && (p.series[j].data[i][0] <= max)) {
+                cnt[j]++;
+                if(maxaxis[p.series[j].yaxis] == null)
+                  maxaxis[p.series[j].yaxis] = p.series[j].data[i][1];
+                else if(p.series[j].data[i][1] > maxaxis[p.series[j].yaxis])
+                  maxaxis[p.series[j].yaxis] = p.series[j].data[i][1];
+              }
+            }
+          }
+        }
+      
+        for(var i = 0;i < p.series.length;i++) {
+          p.series[i].showMarker = cnt[i] <= 100;
+          p.series[i].markerOptions.show = cnt[i] <= 100;
+          p.series[i].markerRenderer.show = cnt[i] <= 100;
+        }
+      
+        for(var ax in maxaxis) {
+          if(maxaxis[ax] != null) {
+            p.axes[ax].max = maxaxis[ax] * p.axes[ax].pad;
+            p.axes[ax].tickInterval = null;
+            p.axes[ax].numberTicks = null;
+            p.axes[ax]._ticks = [];
+          }
+        }
+        p.redraw();
+      };
+    </script>
+    <div id='menu'>
+      <ul>
+        <li class='first'>
+          <a href='index.html'>General</a>
+        </li>
+        <li>
+          <a href='activity.html'>Activity</a>
+        </li>
+        <li>
+          <a href='authors.html'>Authors</a>
+        </li>
+        <li>
+          <a href='files.html'>Files/Lines</a>
+        </li>
+      </ul>
+    </div>
+    <div id='content'>
+      <div id='toc'>
+        <h2>
+          <a name='toc'>Blocks</a>
+        </h2>
+        <ul>
+          <li>
+            <a href='#authors'>Top 100 authors</a>
+          </li>
+          <li>
+            <a href='#top_authors_of_year'>Top 20 authors of year</a>
+          </li>
+          <li>
+            <a href='#top_authors_of_yearmonth'>Top 20 authors of year and month</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        $(document).ready(function() {
+          $("#author_table").tablesorter({sortList: [[1, 1]]});
+        });
+      </script>
+      <h2 class='blockheader'>
+        <a name='authors'>Top 100 authors</a>
+      </h2>
+      
+      <div id="block-authors" class="blockcontainer">
+      <div class='blocktable'>
+        <table class='tablesorter striped' id='author_table'>
+          <thead>
+            <tr>
+              <th>Author</th>
+              <th>Commits</th>
+              <th>Percent</th>
+              <th>Files added</th>
+              <th>Files deleted</th>
+              <th>Lines added</th>
+              <th>Lines deleted</th>
+              <th>First commit</th>
+              <th>Last commit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zhengxing Chen</td>
+              <td>71</td>
+              <td>89.87%</td>
+              <td>342</td>
+              <td>121</td>
+              <td>55987</td>
+              <td>9921</td>
+              <td>2013-01-29</td>
+              <td>2013-05-27</td>
+            </tr>
+            <tr>
+              <td>czxttkl</td>
+              <td>8</td>
+              <td>10.13%</td>
+              <td>2</td>
+              <td>71</td>
+              <td>26</td>
+              <td>338</td>
+              <td>2013-04-16</td>
+              <td>2013-07-20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <h2 class='blockheader'>
+        <a name='top_authors_of_year'>Top 20 authors of year</a>
+      </h2>
+      
+      <div id="block-top_authors_of_year" class="blockcontainer">
+      <div class='blocktable'>
+        <table>
+          <thead>
+            <th>Year</th>
+            <th>Author</th>
+            <th>Commits</th>
+            <th>Total</th>
+          </thead>
+          <tbody>
+            <tr class='top'>
+              <td class='yearauthor_top1'>2013</td>
+              <td class='yearauthor_top1'>Zhengxing Chen</td>
+              <td class='yearauthor_top1'>71 of 79 (89.87%)</td>
+              <td class='yearauthor_top1'>2</td>
+            </tr>
+            <tr class='yearauthor_sub1'>
+              <td class=''></td>
+              <td class=''>czxttkl</td>
+              <td class=''>8 of 79 (10.13%)</td>
+              <td class=''></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+          $(".yearauthor_sub1").hide();
+          $(".yearauthor_top1").click(function() {
+            $(".yearauthor_sub1").toggle();
+            return false;
+          });
+        });
+      </script>
+      <h2 class='blockheader'>
+        <a name='top_authors_of_yearmonth'>Top 20 authors of year and month</a>
+      </h2>
+      
+      <div id="block-top_authors_of_yearmonth" class="blockcontainer">
+      <div class='blocktable'>
+        <table>
+          <thead>
+            <th>Year-Month</th>
+            <th>Author</th>
+            <th>Commits</th>
+            <th>Total</th>
+          </thead>
+          <tbody>
+            <tr class='top'>
+              <td class='yearmonthauthor_top1'>2013-07</td>
+              <td class='yearmonthauthor_top1'>czxttkl</td>
+              <td class='yearmonthauthor_top1'>3 of 3 (100.00%)</td>
+              <td class='yearmonthauthor_top1'>1</td>
+            </tr>
+            <tr class='top'>
+              <td class='yearmonthauthor_top2'>2013-05</td>
+              <td class='yearmonthauthor_top2'>Zhengxing Chen</td>
+              <td class='yearmonthauthor_top2'>25 of 26 (96.15%)</td>
+              <td class='yearmonthauthor_top2'>2</td>
+            </tr>
+            <tr class='yearmonthauthor_sub2'>
+              <td class=''></td>
+              <td class=''>czxttkl</td>
+              <td class=''>1 of 26 (3.85%)</td>
+              <td class=''></td>
+            </tr>
+            <tr class='top'>
+              <td class='yearmonthauthor_top3'>2013-04</td>
+              <td class='yearmonthauthor_top3'>Zhengxing Chen</td>
+              <td class='yearmonthauthor_top3'>30 of 34 (88.24%)</td>
+              <td class='yearmonthauthor_top3'>2</td>
+            </tr>
+            <tr class='yearmonthauthor_sub3'>
+              <td class=''></td>
+              <td class=''>czxttkl</td>
+              <td class=''>4 of 34 (11.76%)</td>
+              <td class=''></td>
+            </tr>
+            <tr class='top'>
+              <td class='yearmonthauthor_top4'>2013-03</td>
+              <td class='yearmonthauthor_top4'>Zhengxing Chen</td>
+              <td class='yearmonthauthor_top4'>9 of 9 (100.00%)</td>
+              <td class='yearmonthauthor_top4'>1</td>
+            </tr>
+            <tr class='top'>
+              <td class='yearmonthauthor_top5'>2013-02</td>
+              <td class='yearmonthauthor_top5'>Zhengxing Chen</td>
+              <td class='yearmonthauthor_top5'>6 of 6 (100.00%)</td>
+              <td class='yearmonthauthor_top5'>1</td>
+            </tr>
+            <tr class='top'>
+              <td class='yearmonthauthor_top6'>2013-01</td>
+              <td class='yearmonthauthor_top6'>Zhengxing Chen</td>
+              <td class='yearmonthauthor_top6'>1 of 1 (100.00%)</td>
+              <td class='yearmonthauthor_top6'>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub1").hide();
+          $(".yearmonthauthor_top1").click(function() {
+            $(".yearmonthauthor_sub1").toggle();
+            return false;
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub2").hide();
+          $(".yearmonthauthor_top2").click(function() {
+            $(".yearmonthauthor_sub2").toggle();
+            return false;
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub3").hide();
+          $(".yearmonthauthor_top3").click(function() {
+            $(".yearmonthauthor_sub3").toggle();
+            return false;
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub4").hide();
+          $(".yearmonthauthor_top4").click(function() {
+            $(".yearmonthauthor_sub4").toggle();
+            return false;
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub5").hide();
+          $(".yearmonthauthor_top5").click(function() {
+            $(".yearmonthauthor_sub5").toggle();
+            return false;
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".yearmonthauthor_sub6").hide();
+          $(".yearmonthauthor_top6").click(function() {
+            $(".yearmonthauthor_sub6").toggle();
+            return false;
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>
