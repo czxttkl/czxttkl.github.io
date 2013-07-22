@@ -5,10 +5,11 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+
     <title>Portfolio | Zhengxing Chen</title>
 
     <!--scrollTo-->
-    <script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery.scrollTo-min.js" type="text/javascript"></script>
     <script language=javascript> 
     $(function(){   
@@ -52,6 +53,16 @@
    });
     </script>
 
+    <!--Tipsy-->
+    <link rel="stylesheet" href="tipsy/tipsy.css" type="text/css">
+    <script type="text/javascript" src="tipsy/jquery.tipsy.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+           $('.tipsy').tipsy();
+         });
+    </script>
+
 </head>
 
 
@@ -73,7 +84,7 @@
 
       <h3  id="project1">
         Mobile Service Awareness Platform&nbsp;
-        <a href="gitstats/stats/index.html" target="_blank" title="gitstats"><img src="images/git.png"></a>
+        <a class="tipsy" href="gitstats/stats/index.html" target="_blank" original-title="View Gitstats"><img src="images/git.png"></a>
       </h3>
       <div class="project" style="height:950px;">
             <div class="projectcontent left">
