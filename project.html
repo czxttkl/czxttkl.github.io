@@ -13,24 +13,6 @@
     <script src="scripts/jquery.scrollTo-min.js" type="text/javascript"></script>
     <script language=javascript> 
     $(function(){   
-        $("#MoveUp3").click(function(){    
-            $.scrollTo( $("#project2"), 400 );
-      });   
-        $("#MoveDown1").click(function(){   
-            $.scrollTo( "#project2", 400 );  
-      });   
-        $("#MoveDown2").click(function(){   
-            $.scrollTo( "#project3", 400 );  
-      });   
-        $("#MoveDown3").click(function(){   
-            $.scrollTo( "#project4", 400 );  
-      });   
-        $("#MoveUp2").click(function(){   
-            $.scrollTo( "#project1", 400 );  
-      });   
-        $("#MoveUp4").click(function(){   
-            $.scrollTo( "#project3", 400 );  
-      });   
         $("#Top").click(function(){   
             $.scrollTo( {top:'0px', left:'0px'}, 400 );  
       });   
@@ -83,6 +65,43 @@
 
 
       <div id="gallery">
+     <h3  id="project6">Debug - Killer Exergame on Android</h3>
+            <div class="project" style="height:950px;">
+                <div class="projectimg left">
+                    <a href="images/debug_1.png" class="tipsyeast fancybox" original-title="A Post Of Our Team" rel="group"> <img src="images/debug_1_port.png" alt="demo" /></a> <br />
+                    <a href="images/debug_2.png" class="tipsyeast fancybox" original-title="Process Edge Info" rel="group"> <img src="images/debug_2_port.png" alt="demo" /></a>
+                    <br />
+                    <a href="images/debug_3.png" class="tipsyeast fancybox" original-title="Process Edge Info" rel="group"> <img src="images/debug_3_port.png" alt="demo" /></a>
+                    <br />
+                  <a href="images/debug_4.jpg" class="tipsyeast fancybox"  original-title="Contest Logo" rel="group"> <img src="images/debug_4_port.jpg" alt="demo" /></a><br />
+                </div>
+                <div class="projectcontent right" style="height:700px;">
+                    <h4 style="margin-top:0;">Objective</h4>
+                    <p>Build a totally addictive novel exergame for kids (and possibly adults too) that uses motion sensing to keep the kids engaged in a very high level of physical activity for long periods of time.</p>
+                    <h4>Overview and Challenges</h4>
+                    <p>This is the final project for Mobile Application Development (CS5800) course. The basic idea of our game is that people hold their phones with back-cameras facing to the ground. They will see some bugs crawling in the real-time camera screen. They can kill these bugs with their feet by burning/squashing them in the game. There are four main challenges: 1. Develop robust computer vision algorithms to detect distinct color on shoes and directions/speed during users' walking. 2.Use OpenGL to render a corresponding 3D game world. 3. Leverage accelerometer sensors to detect jumping. 4. We (two people) only use 1 month to develop the application.</p>
+                    <h4>The Journey</h4>
+                    <p>The game design took us as much time as programming. There are so many goals we want to achieve in the application. First, since it is an exergame, players are supposed to get enough sweat by playing it. So we introduce three different kinds of motions to play the game: walking (for chasing bugs), jumping (for squashing bugs) and shaking (for freezing bugs). Motion varieties are designed on purpose to make the game stickier. Second, it is natural for people to squash bugs when they see them. Due to this nature, we design the game with bugs instead of other game backgrounds. Third, bugs must appear and interact with players in realistic manners. We develop an interesting algorithm that makes sure bugs will bounce when they hit the edges on the floor. And they now could halt on and off just like real bugs on the ground. Fourth, a good game should be easy to learn how to play. We develop built-in step-by-step tutorials and succinct instructions in both images and texts. Our future tasks include integrating social network sharing and a multiplayer mode for competition. As far as we know, the application is the only one, at least among very few other applications, that combines augmented-reality and mHealth.</p>
+                    <h4>Project Info</h4>
+                    <p> 
+                        <span class="inlineRed">Collaborators:</span> Shang Ma, Shaojie Wang(UI) <br />
+                        <span class="inlineRed">Languages & Tools:</span> Java, C, Eclipse, MAT(Memory Analyzer) <br />
+                        <span class="inlineRed">Resources:</span> 
+                        <a class="tipsysouth" original-title="Dropbox " href="https://db.tt/zNGKbCTn" target="_blank">Final Presentation PPT</a>, 
+                        <a class="tipsysouth" original-title="Dropbox" href="https://db.tt/9Bo2M5QM" target="_blank">Project Proposal</a>, 
+                        <a class="tipsysouth" original-title="Google Play" href="https://play.google.com/store/apps/details?id=io.github.czxttkl.madcourse&hl=en" target="_blank">Google Play Store</a><br/>
+                        <span class="inlineRed">Timeline:</span> Nov 2013 - Dec 2013
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
 
       <h3  id="project1">
         Mobile Service Awareness Platform&nbsp;
@@ -120,8 +139,6 @@
 
 
 
-      <div class="galsep"> <span id="MoveDown1">Next</span> </div>
-
             <h3  id="project2">Virtual Costumes-Trial System</h3>
             <div class="project" style="height:750px;">
                 <div class="projectimg left">
@@ -151,8 +168,6 @@
             </div>
 
 
-
-         <div class="galsep" style="text-align:right"> <span id="MoveUp2">Previous</span> <span id="MoveDown2">Next</span> </div>
 
 
 
@@ -186,10 +201,6 @@
 
 
 
-          <div class="galsep"> <span id="MoveUp3">Previous</span> <span id="MoveDown3">Next</span> </div>
-
-
-
 
          <h3  id="project4">MemoQuiz - Game App Development</h3>
          <div class="project" style="height:520px;">
@@ -215,7 +226,7 @@
           </div>
 
 
-          <div class="galsep" style="text-align:right"> <span id="MoveUp4">Previous</span> <span id="Top">Top</span> </div>
+          <div class="galsep" style="text-align:right"><span id="Top">Top</span> </div>
 
 
         </div>
