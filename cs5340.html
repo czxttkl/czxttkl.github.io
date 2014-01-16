@@ -3,7 +3,7 @@
 <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <title>Portfolio | Zhengxing Chen</title>
-      <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="hciclass.css" type="text/css" media="screen" />
 
       <script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>  
       <script type="text/javascript">  
@@ -19,15 +19,8 @@
 
       <div id="czxwebsite">
             <!-- <h3>Zhengxing Chen's Website&nbsp;&nbsp;</h3> -->
-            <img src="images/websitelogo.png">
+            <a href="http://czxttkl.github.io" target="_blank"><img src="images/websitelogo.png"></a>
       </div>
-
-      <!-- menu --> 
-      <ul class="dropdown">
-            <li class="title"><a href="index.html">Home</a></li>
-            <li class="title"><a href="project.html">Projects</a></li>
-            <li class="title"><a href="cv.pdf" target="_blank">CV</a></li>
-      </ul>
 
 
       <div id="intro" class="left"> 
@@ -45,29 +38,81 @@
             </div>
            <!--  <p> I have always <span id="dreamed">dreamed</span> of being a HCI designer and engineer to <span id="bulldoze">bulldoze</span> the barrier between humans and computers. During my undergraduate years I delved into multiple fields, such as computer science, informatics, psychology, photography, chinese calligraphy and music, which prepared me with abundant <span id="interdisciplinary">interdisciplinary</span> knowledge for my further study in HCI. As I always believe that brand <span id="inspiration">inspiration</span> comes from <span id="collaboration">collaboration</span>, I enjoy joining team-orientation programs to have more sparks of inspiration with people with the same interest and <span id="diverse">diverse</span> backgrounds.</p> -->
            <p>Hello world. I would love to do research on <span id="interdisciplinary">interdisciplinary</span> area because I have a wide range of interests. I enjoy joining team-orientation programs to have more sparks of inspiration with people with the same interest and <span id="diverse">diverse</span> backgrounds.</p>
+           <br>
+           <br>
+           <h3>Follow me at: </h3>
+            <a href="https://github.com/czxttkl" target="_blank" title="Github"><img class="snsicon" src="images/github.png"></a>
+            <a href="http://cn.linkedin.com/pub/zhengxing-chen/4b/746/179" target="_blank" title="LinkedIn"><img class="snsicon" src="images/linkedin.png"></a>
+            <a href="https://www.facebook.com/czxttkl" target="_blank" title="Facebook"><img class="snsicon" src="images/facebook.png"></a>
       </div>
 
 
-      <div class="slider-wrapper" style="width:620px;height:400px;display:inline-block;">
-            <span style="font-size:15px;font-weight:bold;">Homework</span>
+      <div class="slider-wrapper" style="width:1020px;height:1800px;display:inline-block;text-align:justify">
+            <span style="font-size:15px;font-weight:bold;">Homework L1</span>
             <hr>
+            <br>  
+            <h5>Debug - an killer exer game</h5>
             
-             <h3>I0 </h3>
-                  <p>
-                  </p>
-            
-            <h3 style="margin-bottom:5px;">I1</h3>
-                  <p>
-                  </p>
+            <ul> It is a developing exergame maintained by <a href="http://shangma.info/" target="_blank">Shang Ma</a> and me. It has been published to Google Play Store. I am excited to continue to polish the game this semester if possible. 
+                   <li><i><b>Problem:</b></i>
+                   People need some momentum to do sports, of course, for example, games. But the reality is that few games are exciting enough to motivate people exercise. With the reality-augmented concept, intensive ways to play the game, conformation with health behavior intervention theory, dedicatedly design game style and the mechanisms to prevent cheating, the app encourages all age groups to exercise and sweat enough in a natural, convenient and interesting manner. </li> 
+ 
+                   <li><i><b>Idea:</b></i>
+                   The basic idea of this game is that people hold their phones with back-cameras facing to the ground. They will see some bugs crawling in the real-time camera screen, and they can kill these bugs with their feet. That is, to stamp on the specific areas on the floor according to the bugs shown in the screen. We plan to apply OpenGL to add bugs on the screen and computer vision techniques (OpenCV for android) to detect the location of users’ feet (shoes) and also determine if players kill bugs. </li>
 
+                   <li><i><b>Platform:</b></i> Android</li>
+
+                   <li><i><b>Resources:</b></i> <a href="https://github.com/czxttkl/Debug" target="_blank">Github project page</a>, <a href="https://play.google.com/store/apps/details?id=com.sx.debug" target="_blank">Google Play Store</a> and <a href="http://czxttkl.github.io/project.html#project6" target="_blank">Project Introduction</a></li>
+                  
+                  <li><i><b>Demo Video:</b></i><br>
+                   <iframe width="560" height="315" src="http://www.youtube.com/embed/gx8iwlgv9A8" frameborder="0" allowfullscreen></iframe></li>
+            </ul>
             <br>
             <br>
 
-            <h3>Follow me at: </h3>
-            <a href="https://github.com/czxttkl" target="_blank" title="Github"><img class="snsicon" src="images/github.png"></a>
-            <a href="http://cn.linkedin.com/pub/zhengxing-chen/4b/746/179" target="_blank" title="LinkedIn"><img class="snsicon" src="images/linkedin.png"></a>
-            <a href="https://plus.google.com/101585096972876170752/posts" target="_blank" title="Google+"><img class="snsicon" src="images/googleplus.png"></a>
-            <a href="https://www.facebook.com/czxttkl" target="_blank" title="Facebook"><img class="snsicon" src="images/facebook.png"></a>
+            <h5>Anti-Overwork Notifier</h5>
+            <ul>
+                  <li><i><b>Problem:</b></i>
+                  Lots of programmers work for long time intensively without taking breaks. Sitting too long will cause bone problems. Besides, watching screen for long time is a culprit for near-sight. Efficiency will also be compromised if people don't get refreshed after long time workload. </li>
+ 
+                  <li><i><b>Idea:</b></i>
+                  We could design an application(or a plug-in) which monitors how long a person has used the computer since last break. When the user sits in front of the computer for long time, the application will notify him to take a break in a kind and efficient way. There are several ways to detect if the user is using the computer:
+                  1. Front-camera and OpenCV algorithm to see if the user is sitting in front of the screen
+                  2. Implement listeners to keyboard/mouse to record the user's APM (Action Per Minute) 3. Audio analysis</li>
+                 
+
+                 <li><i><b>Platform:</b></i> Windows</li>
+            </ul>
+            <br><br>
+            <h5>Online Diagnosis Game</h5>
+            <ul>
+                  <li><i><b>Problem:</b></i>
+                  People lack awareness of common illness, which often leads to their misjudgment about their health conditions. For example, you have stomachache but you have no idea if it is due to enteritis or gastritis, whether you should go to see doctor or if it is good for you to continue your dietary. Due to ignorance of common knowledge in illness, a large amount of resources is spent unnecessarily in our society. </li>
+ 
+
+                  <li><i><b>Idea:</b></i>
+                  I would like to create an online diagnosis game where players play as a doctor to diagnose patients who are NPCs (Non-Player Character). Patients will tell you what symptoms they have, which is based on real-world records, and ask you to give diagnosis result.  The player, according to what he knows so far, guess a disease the patient has. The game will then show you whether you are right or not and detailed explanation. Through the game, the player will learn common awareness in medicine in a fun and easy way. <br>
+ 
+                  Similar concepts have been implemented more or less on mobile apps. But it could be improved in this way: the game will be scaled to MMO(Massive Multiplayer Online) game. Each player manages a virtual hospital and competes for patients. They have to play the game continuously and improve their diagnosis accuracy to draw more patients come.</li>
+
+                  <li><i><b>Platform:</b></i> Android or Web</li>
+            </ul>
+            <br>
+            <br>   
+
+            <h5>(Extra) Intelligent Gym System</h5>
+            <ul>
+                   <li><i><b>Problem:</b></i>
+                  People would love to know metrics measuring what they achieve every time they go to gym (e.g. how much weight you work out for each equipment). Current gym equipment is not intelligent to collect those measurements. People have to bring their own cellphones with some health apps installed to evaluate their workout. It is often the case that those apps are limited and inaccurate because they could only evaluate roughly how far you run but have no way to collect how much weight you work out on gym equipment.  
+ 
+                   <li><i><b>Idea:</b></i>
+                   Every piece of gym equipment will be equipped with a screen and a card reader. When people get accessed to the gym, they are given keys for locker room as well as cards recording their identity. When a person comes to use a piece of equipment, he swipes his card on that equipment and starts to use it. The equipment will record metrics under his identity during workout: the value of current weights and how many times/how high weights are lifted, how long he works out, etc. The records are also sent to database on the fly. Those records, once saved in database, could be accessed individually and shared in social networks on users' agreement. It is also feasible that some huge screens are set up in the gym to display special records for competence: e.g. today's champion who lifts the heaviest weight on one piece of equipment. The system could be more intelligent in the way that it tells you how heavy weights you should lift based on what you have worked out today. </li>
+
+                   <li><i><b>Platform:</b></i> Embedded System, Web and Android</li>
+            </ul>
+            <br>
+            <br>
+
       </div>
 
 
