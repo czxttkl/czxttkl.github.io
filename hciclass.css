@@ -92,32 +92,19 @@ a {
 a:hover {
 	color:#666;
 }
+
 .slider-wrapper { 
-	width: 685px;
-	height:600px; 
 	padding-left:30px;
+	width:1020px;
+	height:2500px;
+	display:inline-block;
+	text-align:justify
 }
-
-#motto {
-	margin-top:20px;
-	font-family:
-	MistralWeb;
-	font-size:2.6em;
-	text-align:right; 
-}
-
-#motto h3 {
-	text-align:right; 
-	margin-top:10px;
-	font-size:0.8em;
-}
-
 
 #czxwebsite {
 	margin-top:20px;
 	text-align:right; 
 }
-
 
 #intro {
 	clear: both;
@@ -142,13 +129,13 @@ a:hover {
 	font-size: 1em;
 	text-align:justify;
 	line-height:2em;
-	}
+}
 
 #intro p span{
-font-size:24px;
-font-family:Tahoma, Geneva, sans-serif;
-color:orange;
-vertical-align: text-top;
+	font-size:24px;
+	font-family:Tahoma, Geneva, sans-serif;
+	color:orange;
+	vertical-align: text-top;
 }
 
 #portrait {
@@ -158,13 +145,15 @@ vertical-align: text-top;
 	background-image:url(images/portrait.png);
 	background-size:136px 144px;
 }
+
 #eduinfo {
 	float:right;
 	text-align:right;
 	font-size:0.8em;
 }
+
 #eduinfo hr {
-width:100%;
+	width:100%;
 }
 
 /*====================*/
@@ -223,7 +212,7 @@ PROJECT CONTENT
 
 .left{
 	float:left;
-	}
+}
 
 .right{
 	float:right;
@@ -248,13 +237,15 @@ PROJECT CONTENT
 .projectimg{
 	width:380px;
 	-width:345px;
-	}
+}
+
 .projectcontent {
 	width:580px;
 	-width:550px;
 	-webkit-box-flex:1;
 	-moz-box-flex:1;
 }
+
 .projectimg a{
 	width: 352px;
 	height: 217px;
@@ -270,52 +261,8 @@ PROJECT CONTENT
 
 .inlineRed {
 	color:#A80F29;
-	}
+}
 	
-
-.galsep {
-	margin-bottom:30px;
-	text-align:right;
-}
-
-#gallery h3 {
-background:url(images/seperator.png) repeat-x bottom;
-margin-top:15px;
-padding:5px;
-padding-left:12px;
-margin-bottom:10px;
-font-size:1.6em;
-font-family:Tahoma, Geneva, sans-serif;
-font-weight: inherit;
-}
-
-.galsep span {
-	color:black;
-	margin-right:20px;
-	margin-left:10px;
-	font-size:1.3em;
-	
-}
-.galsep span:hover {
-	cursor:pointer;
-	font-weight:bold;
-}
-
-.experience {
-	margin-top:20px;
-}
-.experience img{
-	height:50px;
-	margin: 20px;
-	display:block;
-}
-
-
-.experience p {
-	line-height: 2em;
-	text-align:justify;
-}
-
 .snsicon {
 	width: 50px;
 	margin:15px;
@@ -331,4 +278,9 @@ font-weight: inherit;
 
 .slider-wrapper ul li {
 	margin-left: 20px;
+}
+
+.homework-title {
+	font-size:15px;
+	font-weight:bold;
 }
