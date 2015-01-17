@@ -16,40 +16,40 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin:0;
-	padding:0;
-	border:0;
-	outline:0;
-	font-style:inherit;
-	font-size:100%;
-	font-family:inherit;
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-style:inherit;
+font-size:100%;
+font-family:inherit;
 }
 body {
-	line-height:1;
-	color:black;
+line-height:1;
+color:black;
 }
 table {
-	border-collapse:separate;
-	border-spacing:0;
+border-collapse:separate;
+border-spacing:0;
 }
 caption, th, td {
-	text-align:left;
-	font-weight:normal;
+text-align:left;
+font-weight:normal;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content:"";
+content:"";
 }
 blockquote, q {
-	quotes:"" "";
+quotes:"" "";
 }
 /* HTML5 tags */
 header, section, footer,
 aside, nav, article, figure {
-	display: block;
+display: block;
 }
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 h6  {font-size: 1em;margin-bottom:2px;}
 /*===================*/
@@ -57,12 +57,12 @@ h6  {font-size: 1em;margin-bottom:2px;}
 /*===================*/
 
 @font-face {  
-        font-family: "MistralWeb"; 
-        src: url("Mistral.eot"); 
-    } 
+font-family: "MistralWeb"; 
+src: url("Mistral.eot"); 
+} 
 @font-face {  
-    font-family: "MistralWeb"; 
-    src: url("Mistral.TTF") format("truetype"); 
+font-family: "MistralWeb"; 
+src: url("Mistral.TTF") format("truetype"); 
 } 
 
 
@@ -70,91 +70,91 @@ h6  {font-size: 1em;margin-bottom:2px;}
 
 /*------------------ Site Structure ------------------*/
 html { font-size: 100%; 
-	background: url(images/bg2.jpg) no-repeat;background-position:right bottom; 
-	background-size:100%;
-	background-attachment:fixed;}
+background: url(images/bg2.jpg) no-repeat;background-position:right bottom; 
+background-size:100%;
+background-attachment:fixed;}
 
 #fake-body {
-	background-color:transparent; 
-	width:60%;
-	margin: auto; 
-	font-family: Georgia, "Times New Roman", Times, serif; 
-	font-size: .875em; 
-	color: black;
+background-color:transparent; 
+width:60%;
+margin: auto; 
+font-family: Georgia, "Times New Roman", Times, serif; 
+font-size: .875em; 
+color: black;
 }
 
 #header { margin-top:30px;}
 
 #footer {clear: both; 
-	text-align: center; 
-	padding-right:10px; 
-	background-origin:border-box; 
-	background: url(images/seperator.png) repeat-x top;
-	 font-size: .8em; color: #a3a3a3;
-	 padding-bottom:20px;}
+text-align: center; 
+padding-right:10px; 
+background-origin:border-box; 
+background: url(images/seperator.png) repeat-x top;
+font-size: .8em; color: #a3a3a3;
+padding-bottom:20px;}
 
 
 p {line-height: 1.4em; padding-bottom: 25px}
 
 a {
-	color:#C30;
-	text-decoration:none;
+color:#C30;
+text-decoration:none;
 }
 
 a:hover {
-	color:#666;
+color:#666;
 }
 .slider-wrapper { 
-	width: 685px;
-	height:600px; 
-	padding-left:30px;
+width: 685px;
+height:600px; 
+padding-left:30px;
 }
 
 #motto {
-	margin-top:20px;
-	font-family:
-	MistralWeb;
-	font-size:2.6em;
-	text-align:right; 
+margin-top:20px;
+font-family:
+MistralWeb;
+font-size:2.6em;
+text-align:right; 
 }
 
 #motto h3 {
-	text-align:right; 
-	margin-top:10px;
-	font-size:0.8em;
+text-align:right; 
+margin-top:10px;
+font-size:0.8em;
 }
 
 #czxwebsite {
-	margin-top:20px;
-	text-align:right; 
+margin-top:20px;
+text-align:right; 
 }
 
 
 #intro {
-	clear: both;
-	padding: 20px;
-	padding-right:30px;
-	padding-top:0px;
-	line-height: 1.6em; 
-	width:298px;
-	display:inline-block;
-	padding-bottom:100px;
+clear: both;
+padding: 20px;
+padding-right:30px;
+padding-top:0px;
+line-height: 1.6em; 
+width:298px;
+display:inline-block;
+padding-bottom:100px;
 }
 
 #personalinfo {
-	-webkit-box-orient:horizontal;
-	-moz-box-orient:horizontal;
-	margin-bottom:1em;
-	margin-top:1em;
-	width:100%;
-	height:160px;
+-webkit-box-orient:horizontal;
+-moz-box-orient:horizontal;
+margin-bottom:1em;
+margin-top:1em;
+width:100%;
+height:160px;
 }
 
 #intro p {padding: 0;
-	font-size: 1em;
-	text-align:justify;
-	line-height:2em;
-	}
+font-size: 1em;
+text-align:justify;
+line-height:2em;
+}
 
 #intro p span{
 font-size:24px;
@@ -164,16 +164,16 @@ vertical-align: text-top;
 }
 
 #portrait {
-	width:136px;
-	float:left;
-	height:144px;
-	background-image:url(images/portrait.png);
-	background-size:136px 144px;
+width:136px;
+float:left;
+height:144px;
+background-image:url(images/portrait.png);
+background-size:136px 144px;
 }
 #eduinfo {
-	float:right;
-	text-align:right;
-	font-size:0.8em;
+float:right;
+text-align:right;
+font-size:0.8em;
 }
 #eduinfo hr {
 width:100%;
@@ -186,17 +186,17 @@ width:100%;
 
 
 ul.dropdown                         { position: relative; 
-									  z-index:10; margin: auto; 
-									  font-family:Verdana, Geneva, sans-serif;
-									  font-size:1.5em;
-									  height:36px;
-									  margin-bottom: 4px}
-									  
+z-index:10; margin: auto; 
+font-family:Verdana, Geneva, sans-serif;
+font-size:1.5em;
+height:36px;
+margin-bottom: 4px}
+
 ul.dropdown li.title                     { float: left; zoom: 1;}
 ul.dropdown li.social                    { float: right; zoom: 1;}
 ul.dropdown li.titlenew					 { float: right; zoom: 1; margin-left: 40px;}
 ul.dropdown li a                    { display: block; 
-	 								  color:#C30; }
+color:#C30; }
 ul.dropdown li.title a {padding: 0px 20px;}
 ul.dropdown li.social a {padding: 0px 1px;}
 ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
@@ -209,7 +209,7 @@ ul.dropdown li a:hover              { color: #666; }
 /*=== Other Styles ===*/
 /*====================*/
 .clear {
-	clear:both;
+clear:both;
 }
 
 
@@ -218,76 +218,76 @@ ul.dropdown li a:hover              { color: #666; }
 PROJECT CONTENT
 */
 .project {
-	-webkit-box-orient:horizontal;
-	display:-moz-box;
-	-moz-box-orient:horizontal;
+-webkit-box-orient:horizontal;
+display:-moz-box;
+-moz-box-orient:horizontal;
 }
 .projectcontent h4	{
-	padding-top:5px;
-	padding-left:10px;
-	padding-bottom:5px;
-	background: #E6E6E6;
-	line-height: 14px;
-	margin: 6px 0px;
-	font-size:1.1em;
-	font-weight:200;
+padding-top:5px;
+padding-left:10px;
+padding-bottom:5px;
+background: #E6E6E6;
+line-height: 14px;
+margin: 6px 0px;
+font-size:1.1em;
+font-weight:200;
 }
 
 .left{
-	float:left;
-	}
+float:left;
+}
 
 .right{
-	float:right;
+float:right;
 }
 
 .projectcontent p {
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom:0px;
-	line-height:1.7em;
-	text-align: justify;
+padding-left:10px;
+padding-right:10px;
+padding-bottom:0px;
+line-height:1.7em;
+text-align: justify;
 }
 
 .projectcontent a {
-	color:black;
+color:black;
 }
 
 .projectcontent a:hover {
-	color:#A80F29;
+color:#A80F29;
 }
 
 .projectimg{
-	width:380px;
-	-width:345px;
-	}
+width:380px;
+-width:345px;
+}
 .projectcontent {
-	width:580px;
-	-width:550px;
-	-webkit-box-flex:1;
-	-moz-box-flex:1;
+width:580px;
+-width:550px;
+-webkit-box-flex:1;
+-moz-box-flex:1;
 }
 .projectimg a{
-	width: 352px;
-	height: 217px;
-	padding-top: 10px;
-	padding-left:10px;
-	padding-right:10px;
-	float: left;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-top:0px;
-	background: url(images/thumb_bg.png) no-repeat;
+width: 352px;
+height: 217px;
+padding-top: 10px;
+padding-left:10px;
+padding-right:10px;
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+margin-top:0px;
+background: url(images/thumb_bg.png) no-repeat;
 }
 
 .inlineRed {
-	color:#A80F29;
-	}
-	
+color:#A80F29;
+}
+
 
 .galsep {
-	margin-bottom:30px;
-	text-align:right;
+margin-bottom:30px;
+text-align:right;
 }
 
 #gallery h3 {
@@ -302,113 +302,113 @@ font-weight: inherit;
 }
 
 .galsep span {
-	color:black;
-	margin-right:20px;
-	margin-left:10px;
-	font-size:1.3em;
-	
+color:black;
+margin-right:20px;
+margin-left:10px;
+font-size:1.3em;
+
 }
 .galsep span:hover {
-	cursor:pointer;
-	font-weight:bold;
+cursor:pointer;
+font-weight:bold;
 }
 
 .experience {
-	margin-top:20px;
+margin-top:20px;
 }
 .experience img{
-	height:50px;
-	margin: 20px;
-	display:block;
+height:50px;
+margin: 20px;
+display:block;
 }
 
 
 .experience p {
-	line-height: 2em;
-	text-align:justify;
+line-height: 2em;
+text-align:justify;
 }
 
 .snsicon {
-	width: 70px;
-	margin:15px;
+width: 70px;
+margin:15px;
 }
 
 .slider-wrapper h3 {
-	font-size:15px;
+font-size:15px;
 }
 
 .slider-wrapper ul {
-	line-height: 2em;
+line-height: 2em;
 }
 
 .slider-wrapper ul li {
-	margin-left: 20px;
+margin-left: 20px;
 }
 
 
 
 /*d3 gallery*/
 #examples {
-  background: #ddd;
-  /*width:60px;*/
-  width: 100%;
-  height: 160px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  border-top: solid 1px #fff;
-  border-bottom: solid 1px #fff;
-  position:absolute; 
-  bottom:0
+background: #ddd;
+/*width:60px;*/
+width: 100%;
+height: 160px;
+overflow: hidden;
+padding: 0;
+position: relative;
+border-top: solid 1px #fff;
+border-bottom: solid 1px #fff;
+position:absolute; 
+bottom:0
 }
 
 #examples:after,
 #examples:before {
-  content: "";
-  display: block;
-  width: 100%;
-  position: absolute;
-  background: red;
-  height: 16px;
-  z-index: 2;
+content: "";
+display: block;
+width: 100%;
+position: absolute;
+background: red;
+height: 16px;
+z-index: 2;
 }
 
 #examples:before {
-  bottom: -16px;
-  box-shadow: 0px -8px 16px rgba(0,0,0,.3);
+bottom: -16px;
+box-shadow: 0px -8px 16px rgba(0,0,0,.3);
 }
 
 #examples:after {
-  top: -16px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,.3);
+top: -16px;
+box-shadow: 0px 8px 16px rgba(0,0,0,.3);
 }
 
 #examples-deep {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 #examples svg,
 #examples canvas {
-  position: absolute;
+position: absolute;
 }
 
 .example-mesh {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2px;
+fill: none;
+stroke: #fff;
+stroke-width: 2px;
 }
 
 .example-anchor path {
-  fill: none;
-  pointer-events: all;
+fill: none;
+pointer-events: all;
 }
 
 .example-anchor path:hover {
-  stroke: #000;
-  stroke-width: 2px;
+stroke: #000;
+stroke-width: 2px;
 }
