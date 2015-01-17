@@ -27,7 +27,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	line-height:1;
 	color:black;
-	background:white;
 }
 table {
 	border-collapse:separate;
@@ -70,13 +69,29 @@ h6  {font-size: 1em;margin-bottom:2px;}
 
 
 /*------------------ Site Structure ------------------*/
-html { font-size: 100%; background: url(images/bg.jpg) no-repeat;background-position:right bottom; background-size:100%;background-attachment:fixed;}
+html { font-size: 100%; 
+	background: url(images/bg2.jpg) no-repeat;background-position:right bottom; 
+	background-size:100%;
+	background-attachment:fixed;}
 
-body {background-color:transparent; width: 1000px; margin: auto; font-family: Georgia, "Times New Roman", Times, serif; font-size: .875em; color: black;}
+#fake-body {
+	background-color:transparent; 
+	width:60%;
+	margin: auto; 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	font-size: .875em; 
+	color: black;
+}
 
 #header { margin-top:30px;}
 
-#footer {clear: both; text-align: right; padding-right:10px; background-origin:border-box; background: url(images/seperator.png) repeat-x top; font-size: .8em; color: #a3a3a3;padding-bottom:20px;}
+#footer {clear: both; 
+	text-align: center; 
+	padding-right:10px; 
+	background-origin:border-box; 
+	background: url(images/seperator.png) repeat-x top;
+	 font-size: .8em; color: #a3a3a3;
+	 padding-bottom:20px;}
 
 
 p {line-height: 1.4em; padding-bottom: 25px}
@@ -109,7 +124,6 @@ a:hover {
 	font-size:0.8em;
 }
 
-
 #czxwebsite {
 	margin-top:20px;
 	text-align:right; 
@@ -124,6 +138,7 @@ a:hover {
 	line-height: 1.6em; 
 	width:298px;
 	display:inline-block;
+	padding-bottom:100px;
 }
 
 #personalinfo {
@@ -328,4 +343,72 @@ font-weight: inherit;
 
 .slider-wrapper ul li {
 	margin-left: 20px;
+}
+
+
+
+/*d3 gallery*/
+#examples {
+  background: #ddd;
+  /*width:60px;*/
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  position:absolute; 
+  bottom:0
+}
+
+#examples:after,
+#examples:before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  background: red;
+  height: 16px;
+  z-index: 2;
+}
+
+#examples:before {
+  bottom: -16px;
+  box-shadow: 0px -8px 16px rgba(0,0,0,.3);
+}
+
+#examples:after {
+  top: -16px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,.3);
+}
+
+#examples-deep {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#examples svg,
+#examples canvas {
+  position: absolute;
+}
+
+.example-mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.example-anchor path {
+  fill: none;
+  pointer-events: all;
+}
+
+.example-anchor path:hover {
+  stroke: #000;
+  stroke-width: 2px;
 }
