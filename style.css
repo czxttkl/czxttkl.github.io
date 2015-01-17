@@ -124,7 +124,7 @@ margin-top:10px;
 font-size:0.8em;
 }
 
-#czxwebsite {
+#website_logo {
 margin-top:20px;
 text-align:right; 
 }
@@ -179,28 +179,23 @@ font-size:0.8em;
 width:100%;
 }
 
-/*====================*/
-/*===drop down ===*/
-/*====================*/
 
-
-
-ul.dropdown                         { position: relative; 
+ul.menu                         { position: relative; 
 z-index:10; margin: auto; 
 font-family:Verdana, Geneva, sans-serif;
 font-size:1.5em;
 height:36px;
 margin-bottom: 4px}
 
-ul.dropdown li.title                     { float: left; zoom: 1;}
-ul.dropdown li.social                    { float: right; zoom: 1;}
-ul.dropdown li.titlenew					 { float: right; zoom: 1; margin-left: 40px;}
-ul.dropdown li a                    { display: block; 
+ul.menu li.menu_title                     { float: left; zoom: 1;}
+ul.menu li.social                    { float: right; zoom: 1;}
+ul.menu li.menu_title_project					 { float: right; zoom: 1; margin-left: 40px;}
+ul.menu li a                    { display: block; 
 color:#C30; }
-ul.dropdown li.title a {padding: 0px 20px;}
-ul.dropdown li.social a {padding: 0px 1px;}
-ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
-ul.dropdown li a:hover              { color: #666; }
+ul.menu li.menu_title a {padding: 0px 20px;}
+ul.menu li.social a {padding: 0px 1px;}
+ul.menu li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.menu li a:hover              { color: #666; }
 
 
 
