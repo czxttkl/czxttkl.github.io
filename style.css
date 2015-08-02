@@ -70,7 +70,7 @@ src: url("Mistral.TTF") format("truetype");
 
 /*------------------ Site Structure ------------------*/
 html { font-size: 100%; 
-background: url(images/bg2.jpg) no-repeat;background-position:right bottom; 
+/*background: url(images/bg2.jpg) no-repeat;background-position:right bottom; */
 background-size:100%;
 background-attachment:fixed;}
 
@@ -314,6 +314,7 @@ margin-top:20px;
 .experience img{
 height:50px;
 margin: 20px;
+margin-bottom: 1px;
 display:block;
 }
 
