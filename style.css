@@ -76,7 +76,7 @@ background-attachment:fixed;}
 
 #fake-body-index {
 background-color:transparent; 
-width:60%;
+width:70%;
 margin: auto; 
 font-family: Georgia, "Times New Roman", Times, serif; 
 font-size: .875em; 
@@ -113,9 +113,11 @@ text-decoration:none;
 a:hover {
 color:#666;
 }
-.slider-wrapper { 
-width: 685px;
-height:600px; 
+
+.side-info { 
+width:70%;
+height:600px;
+display:inline-block;
 padding-left:30px;
 }
 
@@ -337,18 +339,21 @@ width: 70px;
 margin:15px;
 }
 
-.slider-wrapper h3 {
+.side-info h3 {
 font-size:15px;
 }
 
-.slider-wrapper ul {
-line-height: 2em;
+.side-info ul {
+line-height: 1.5em;
 }
 
-.slider-wrapper ul li {
+.side-info ul li {
 margin-left: 20px;
 }
 
+.side-info li {
+	margin-bottom: 0.5em;
+}
 
 
 /*d3 gallery*/
