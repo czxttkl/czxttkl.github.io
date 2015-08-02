@@ -1032,7 +1032,9 @@ https://github.com/czxttkl/hugedata-runnerserver
         d.j = i / 10 | 0;
     });
 
-    Math.seedrandom(+d3.time.hour(new Date));
+    seed = +d3.time.hour(new Date(2015, 7, 1, 12, 12, 0,0)) 
+    Math.seedrandom(seed);
+    alert(new Date() + new Date(2015, 8, 1, 12, 12, 0,0))
 
     d3.shuffle(data);
 
