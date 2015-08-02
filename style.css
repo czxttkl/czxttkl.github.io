@@ -74,9 +74,18 @@ html { font-size: 100%;
 background-size:100%;
 background-attachment:fixed;}
 
-#fake-body {
+#fake-body-index {
 background-color:transparent; 
 width:60%;
+margin: auto; 
+font-family: Georgia, "Times New Roman", Times, serif; 
+font-size: .875em; 
+color: black;
+}
+
+#fake-body-project {
+background-color:transparent; 
+width:55%;
 margin: auto; 
 font-family: Georgia, "Times New Roman", Times, serif; 
 font-size: .875em; 
@@ -314,7 +323,6 @@ margin-top:20px;
 .experience img{
 height:50px;
 margin: 20px;
-margin-bottom: 1px;
 display:block;
 }
 
