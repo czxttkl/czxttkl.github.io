@@ -75,10 +75,10 @@ background-size:100%;
 background-attachment:fixed;}
 
 #fake-body-index {
-background-color:transparent; 
+/*background-color:transparent; 
 width:70%;
 margin: auto; 
-font-family: Georgia, "Times New Roman", Times, serif; 
+*/font-family: Georgia, "Times New Roman", Times, serif; 
 font-size: .875em; 
 color: black;
 }
@@ -114,13 +114,6 @@ a:hover {
 color:#666;
 }
 
-.side-info { 
-width:70%;
-height:600px;
-display:inline-block;
-padding-left:30px;
-}
-
 #motto {
 margin-top:20px;
 font-family:
@@ -142,14 +135,14 @@ text-align:right;
 
 
 #intro {
-clear: both;
+/*clear: both;
 padding: 20px;
 padding-right:30px;
 padding-top:0px;
 line-height: 1.6em; 
 width:298px;
 display:inline-block;
-padding-bottom:100px;
+padding-bottom:100px;*/
 }
 
 #personalinfo {
@@ -161,7 +154,8 @@ width:100%;
 height:160px;
 }
 
-#intro p {padding: 0;
+#intro p {
+padding: 0;
 font-size: 1em;
 text-align:justify;
 line-height:2em;
@@ -174,21 +168,8 @@ color:orange;
 vertical-align: text-top;
 }
 
-#portrait {
-width:136px;
-float:left;
-height:144px;
-background-image:url(images/portrait.png);
-background-size:136px 144px;
-}
-#eduinfo {
-float:right;
-text-align:right;
-font-size:0.8em;
-}
-#eduinfo hr {
-width:100%;
-}
+
+
 
 
 ul.menu                         { position: relative; 
@@ -203,7 +184,7 @@ ul.menu li.social                    { float: right; zoom: 1;}
 ul.menu li.menu_title_project					 { float: right; zoom: 1; margin-left: 40px;}
 ul.menu li a                    { display: block; 
 color:#C30; }
-ul.menu li.menu_title a {padding: 0px 20px;}
+ul.menu li.menu_title a {padding: 0px 30px 0px 0px;}
 ul.menu li.social a {padding: 0px 1px;}
 ul.menu li:last-child a         { border-right: none; } /* Doesn't work in IE */
 ul.menu li a:hover              { color: #666; }
@@ -341,6 +322,9 @@ margin:15px;
 
 .side-info h3 {
 font-size:15px;
+ font-weight: 900;
+ margin-bottom: 0px;
+ margin-top:30px;
 }
 
 .side-info ul {

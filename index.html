@@ -21,56 +21,72 @@
         }
         konami.load()
     </script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div id="fake-body-index">
+    <div id="fake-body-index" class="container">
 
         <div id="website_logo">
             <img src="images/websitelogo.png">
         </div>
 
-        <!-- menu -->
-        <ul class="menu">
-            <li class="menu_title">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="menu_title">
-                <a href="project.html">Projects <span style="font-size:50%">(Non-Publication) </span></a>
-            </li>
-        </ul>
-        <!-- menu -->
+        <div id="intro" class="left col-md-3">
+            <!-- menu -->
+            <div class="row pull-left"  style="margin-bottom:5%">
+                <ul class="menu">
+                    <li class="menu_title">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="menu_title">
+                        <a href="project.html">Projects <span style="font-size:50%">(Non-Publication) </span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- menu -->
 
-        <div id="intro" class="left">
-            <div id="personalinfo">
-                <div id="portrait">
-                  <!-- add image in css -->
+
+            <div id="personalinfo" class="row">
+                <div class="col-md-8">
+                  <img src="images/portrait.png" class="img-responsive row" alt="Responsive image">
                 </div>
-                <div id="eduinfo">
+
+                <!-- personal information -->
+                <div class="pull-right" style="text-align:right;font-size:0.8em;"> 
                     Zhengxing Chen
                     </br>
                     +1 617-982-8992
                     </br>
                     czxttkl@gmail.com
-                    <hr align="right" /> PhD Student, TA
+                    <hr align="right" style="border-top: 1.5px solid #E5E5E5;" /> PhD Student, TA
                     </br>
                     Computer Science
                     </br>
-                    Northeastern Univ
+                    Northeastern Univ.
                     </br>
                 </div>
             </div>
-            <p>
+
+            <div class="row" style="margin-right:7%;margin-top:17%">
+                <p>
                 Two year experience in <span>game analytics</span>. Interested in player modeling, play style clustering and virtual behavior prediction in
 video games using machine learning, data mining and statistical tests. My PhD research topic is to study factors which affect <span>team performance</span> in video games. 
-            </p>
+                </p>
+            </div>
+            
         </div>
 
 
-        <div class="side-info">
-            <hr>
+        <div class="side-info col-md-9">
+            <hr style="border-top: 1.5px solid #E5E5E5;">
             <div class="experience">
-                <h3>
+                <h3 style="margin-top:0px;">
       				Sep 2013 - Present 
     			</h3>
                 <img src="images/northeastern.png">
@@ -81,13 +97,13 @@ In Feb 2013, I got admitted into the PhD program in Computer Science at Northeas
 </p>
 -->
             </div>
-        <p></p>    
-		<h3 style="margin-bottom:5px;">
+     
+		<h3>
           Research Topic 
         </h3>
           Virtual Team Performance in Video Games	
-          <p></p>        
-        <h3 style="margin-bottom:5px;">
+           
+        <h3>
           Publication 
         </h3>
             <ul style="list-style:disc">
@@ -130,9 +146,6 @@ https://github.com/czxttkl/hugedata-runnerserver
 -->
             </ul>
 
-            <br>
-            <br>
-
             <h3>
           Follow me at: 
         </h3>
@@ -172,14 +185,14 @@ https://github.com/czxttkl/hugedata-runnerserver
 
 
 <!-- d3 library -->
-<div id="examples">
+<!-- <div id="examples">
     <div id="examples-deep" style="-webkit-transform: translate(-3px, 40px);">
         <canvas height="575" width="2400" style="left: -240px; top: -57px;">
         </canvas>
         <svg height="575" width="2400" style="left: -240px; top: -57px;">          
         </svg>
     </div>
-</div>
+</div> -->
 
 
 
